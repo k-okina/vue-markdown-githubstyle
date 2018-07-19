@@ -4,7 +4,7 @@ import marked, { Renderer } from 'marked';
 import highlight from 'highlight.js';
 import './markdown.scss';
 
-function toMarkdown(source) {
+function toMarkdown(source, options = {}) {
   const markedOptions = {
     langPrefix: 'hljs language-',
     renderer: new Renderer(),
@@ -18,7 +18,7 @@ function toMarkdown(source) {
     highlight: code => highlight.highlightAuto(code).value,
   };
 
-  return marked(source, markedOptions);
+  return marked(source, Object.assign({}, markedOptions, options));
 }
 
 export default {
@@ -32,6 +32,10 @@ export default {
       type: String,
       default: '',
     },
+    options: {
+      type: Object,
+      default: () => ({}),
+    },
   },
   render(h) {
     const options = {
@@ -39,7 +43,7 @@ export default {
         'markdown-body': true,
       },
       domProps: {
-        innerHTML: toMarkdown(this.source),
+        innerHTML: toMarkdown(this.source, this.options),
       },
     };
     return h(this.tag, options);
