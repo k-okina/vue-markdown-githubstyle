@@ -1,0 +1,14 @@
+.markdown-body {
+
+  ul li {
+    list-style-type: initial;
+
+    ul li {
+      list-style-type: circle;
+
+      ul li {
+        list-style-type: square;
+      }
+    }
+  }
+}

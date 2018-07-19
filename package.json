@@ -1,0 +1,28 @@
+{
+  "name": "vue-markdown-githubstyle",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "description": "Vue 2.x Markdown Component Github Style.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k-okina/vue-markdown-githubstyle.git"
+  },
+  "author": "Kahiro Okina <okinakahiro@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/k-okina/vue-markdown-githubstyle/issues"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vue-markdown",
+    "markdown",
+    "github",
+    "markdown-githubstyle",
+    "vue-markdown-githubstyle",
+    "component"
+  ],
+  "engines": {
+    "node": ">=6"
+  }
+}
